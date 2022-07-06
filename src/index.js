@@ -1,8 +1,9 @@
-import { saludar } from './js/componentes';
+import { buildTitle } from './js/componentes';
 import './styles.css';
+import * as bootstrap from 'bootstrap';
 
-const nombre = 'Aura'
-saludar (nombre);
+
+buildTitle ();
 
 
 
