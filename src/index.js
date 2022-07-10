@@ -4,3 +4,5 @@ import { createTodoHtml } from './js/componentes';
 
 const todos = [];
 export const todoList = new ToDoList();
+
+todoList.todos.forEach(createTodoHtml);
