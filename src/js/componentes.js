@@ -3,6 +3,7 @@ import { todoList } from "../index";
 
 const divTodoList = document.querySelector('.todo-list');
 const txtInput = document.querySelector('.new-todo');
+const btnDeleteDone = document.querySelector('.clear-completed');
 
 export const createTodoHtml = ( todo ) => {
     const htmlToDo = `
@@ -45,3 +46,15 @@ divTodoList.addEventListener('click', (event) => {
     }
     console.log(todoList);
 });
+
+btnDeleteDone.addEventListener('click', (event) => {
+    todoList.deleteTodoDone();
+    console.log(todoList);
+
+    for (let i=divTodoList.children.length-1; i>=0; i--){
+        const elem = divTodoList.children[i];
+        if (elem.classList.contains('completed')){
+            divTodoList.removeChild( elem );
+        }
+    }
+})
