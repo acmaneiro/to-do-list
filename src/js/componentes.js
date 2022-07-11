@@ -81,7 +81,7 @@ filters.addEventListener('click', event => {
                         element.classList.add('hidden');
                     }
                     break;
-                case 'Completados':
+                case 'Hecho':
                     if (!done){
                         element.classList.add('hidden');
                     }
