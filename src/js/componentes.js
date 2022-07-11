@@ -6,6 +6,10 @@ const txtInput = document.querySelector('.new-todo');
 const btnDeleteDone = document.querySelector('.clear-completed');
 const filters = document.querySelector('.filters');
 const anchorFiltros = document.querySelectorAll('.filtro');
+const filtersFooter = document.querySelector('.footer');
+export const ocultarFiltros = () => {
+    filtersFooter.classList.add('hidden');
+}
 
 export const createTodoHtml = ( todo ) => {
     const htmlToDo = `
@@ -31,6 +35,7 @@ txtInput.addEventListener('keyup', ( event ) => {
         todoList.newTodo(newTodo);
         createTodoHtml(newTodo);
         txtInput.value = '';
+        filtersFooter.classList.remove('hidden');
     }
 })
 
